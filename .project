@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>data/plane_crashes.csv</name>
+			<type>1</type>
+			<location>C:/Users/diego/OneDrive/Escritorio/plane_crashes.csv</location>
+		</link>
+	</linkedResources>
 </projectDescription>
