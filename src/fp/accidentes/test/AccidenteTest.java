@@ -9,6 +9,8 @@ import fp.accidentes.Accidente;
 import fp.common.Avion;
 import fp.common.TipoAccidente;
 
+// test
+
 public class AccidenteTest {
 	
 	public static void mostrarAccidente(Accidente a) {
