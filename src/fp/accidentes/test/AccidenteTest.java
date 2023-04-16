@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import fp.accidentes.Accidente;
+import fp.accidentes.Accidentes;
+import fp.accidentes.FactoriaAccidentes;
 import fp.common.Avion;
 import fp.common.TipoAccidente;
 
