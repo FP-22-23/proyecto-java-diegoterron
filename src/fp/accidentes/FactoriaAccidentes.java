@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import fp.accidentes.Accidente;
 import fp.common.Avion;
@@ -25,6 +26,21 @@ public class FactoriaAccidentes {
 					.map(FactoriaAccidentes::parsearAccidente)
 					.collect(Collectors.toList());
 			
+			res = new Accidentes(partidas);
+			} catch(IOException e) {
+			System.out.println("Fichero no encontrado: "+nomfich);
+			e.printStackTrace();
+		}
+	return res; 
+	}
+	
+	public static Accidentes leerAccidentesStream(String nomfich) {
+		Accidentes res=null;
+		int i=0;
+		try {
+			Stream<Accidente>  partidas=Files.lines(Paths.get(nomfich))
+					.skip(1)
+					.map(FactoriaAccidentes::parsearAccidente);
 			res = new Accidentes(partidas);
 			} catch(IOException e) {
 			System.out.println("Fichero no encontrado: "+nomfich);

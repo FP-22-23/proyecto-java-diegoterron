@@ -11,7 +11,7 @@ public class AccidentesTest {
 		
 		System.out.println("\nfiltrarPorUbicacion");
 		System.out.println("================================");
-		accidentes.filtrarPorUbicacion("Spain");
+		accidentes = accidentes.filtrarPorUbicacion("Spain");
 		System.out.println("Sólo accidentes en \"Spain\": ");
 		System.out.println(accidentes);
 		
