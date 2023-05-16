@@ -38,9 +38,9 @@ public class AccidentesStreamsTest {
 		System.out.println("================================");
 		System.out.println("Accidentes filtrados por ubicación usando Stream: " + accidentes.filtrarPorUbicacionStream("Spain"));
 
-		System.out.println("\nagruparPorTipoDeAccidenteStreams");
+		System.out.println("\nagruparPorTipoDeAccidenteStream");
 		System.out.println("================================");
-		System.out.println("Agrupado por tipo de accidente usando Streams: " + accidentes.agruparPorTipoDeAccidenteStreams());
+		System.out.println("Agrupado por tipo de accidente usando Streams: " + accidentes.agruparPorTipoDeAccidenteStream());
 
 		System.out.println("\ngetMayorAccidentePorTipo");
 		System.out.println("================================");

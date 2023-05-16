@@ -148,7 +148,7 @@ public class Accidentes {
 			.collect(Collectors.toList()));
 	}
 	
-	public Map<TipoAccidente, List<Accidente>> agruparPorTipoDeAccidenteStreams() {
+	public Map<TipoAccidente, List<Accidente>> agruparPorTipoDeAccidenteStream() {
 	    Map<TipoAccidente, List<Accidente>> res = accidentes.stream()
 	            .collect(Collectors.groupingBy(Accidente::getAccidentType));
 
