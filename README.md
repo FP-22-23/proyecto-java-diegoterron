@@ -99,6 +99,18 @@ Clase contenedora de los objetos de tipo Accidente.
 - _boolean add(Collection<Accidente> a)_: Añade una colección de accidentes al contenedor.
 - _boolean remove(Accidente a)_: Quita un accidente del contenedor.
 - _boolean contains(Accidente a)_: Comprueba si un accidente existe en el contenedor.
-- _void filtrarPorUbicacion(String ubi)_: Filtra el contenedor de forma que sólo se incluyan los accidentes que han ocurrido en la ubicación especificada.
-- _Map<TipoAccidente, List<Accidente>> agruparPorTipoDeAccidente()_: agrupa los accidentes por el tipo de accidente que hayan sido (propiedad _TipoAccidente_).
+- _Accidentes filtrarPorUbicacion(String ubi)_: Devuelve un contenedor de forma que sólo se incluyan los accidentes que han ocurrido en la ubicación especificada.
+- _Map<TipoAccidente, List\<Accidente>> agruparPorTipoDeAccidente()_: agrupa los accidentes por el tipo de accidente que hayan sido (propiedad _TipoAccidente_).
 - _Map<TipoAccidente, Integer> contarPorTipoDeAccidente()_: cuenta los accidentes por el tipo de accidente que hayan sido (propiedad _TipoAccidente_).
+
+Algunas operaciones se han vuelto a implementar utilizando streams:
+
+- _boolean containsStream(Accidente a)_: Comprueba si un accidente existe en el contenedor.
+- _float getMediaMuertesStream(Accidente a)_: Devuelve la media de todas las muertes.
+- _Accidentes filtrarPorUbicacionStream(String ubi)_: Devuelve un contenedor de forma que sólo se incluyan los accidentes que han ocurrido en la ubicación especificada.
+- _Map<TipoAccidente, List\<Accidente>> agruparPorTipoDeAccidenteStream()_: agrupa los accidentes por el tipo de accidente que hayan sido (propiedad _TipoAccidente_).
+- _Accidente getMaxMuertes(String ubi)_: devuelve el accidente con más muertes de la ubicación especificada.
+- _Map<TipoAccidente,Accidente> getMayorAccidentePorTipo()_: devuelve un Map en el que las claves son los tipos de accidentes y los valores son los accidentes con mayores muertes de ese tipo.
+- _Map<String,Set\<TipoAccidente>> getTiposPorUbicacion()_: devuelve un Map en el que las claves son las ubicaciones y los valores son sets con los tipos de accidentes producidos en ellas.
+- _SortedMap<Integer, List\<Accidente>> tripulacionPorNMuertes(int n)_: devuelve un SortedMap en el que las claves son Integers con números de tripulantes y las claves son listas de los *n* accidentes con mayor número de muertes con ese número de tripulantes.
+- _SortedMap<Integer, Accidente> tripulacionPorMasMuertes()_: devuelve un SortedMap en el que las claves son Integers con números de tripulantes y las claves son los accidentes con mayor número de muertes con ese número de tripulantes.
